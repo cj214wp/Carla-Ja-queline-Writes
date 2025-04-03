@@ -28,7 +28,12 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+          retention-days: 1
           
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: '.' 
