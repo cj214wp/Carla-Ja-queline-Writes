@@ -122,6 +122,18 @@ nav {
     position: relative;
 }
 
+.logo .fa-feather-alt::after {
+    content: "........";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--secondary-color);
+    margin-left: 5px;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
